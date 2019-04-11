@@ -25,9 +25,10 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: bullies_development
-    host: localhost
+  host: localhost
   username: badbullies
   password: badbullies
 
