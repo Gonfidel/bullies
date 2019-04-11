@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bullies</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <header>
+      <%= image_tag 'logo_background.jpg', id: 'logo' %>
+    </header>
+      
+    <hr>
+
+      <div class="navbar ">
+        <span><button class="btn text-lobster underline grow">HOME</button></span>
+        <span><button class="btn text-lobster underline grow">STUDS</button></span>
+        <span><button class="btn text-lobster underline grow">FEMALES</button></span>
+        <span><button class="btn text-lobster underline grow">PUPS</button></span>
+        <span><button class="btn text-lobster underline grow">CONTACT US</button></span>
+      </div>
+    <hr>
+
+
+
+    <%= yield %>
+
+
+    <hr>
+    <footer>
+      <div class="container">
+        <div class="d-flex justify-content-around">
+
+          <button class="btn btn-default grow" onclick="window.open('https://www.facebook.com/badriderbullies','_blank');">
+            <i class="fab fa-facebook fa-3x golden"></i>
+          </button>
+
+          <button class="btn btn-default grow" onclick="window.open('https://www.instagram.com/bad_rider_bullies','_blank');">
+            <i class="fab fa-instagram fa-3x golden"></i>
+          </button>
+
+          <button class="btn btn-default grow">
+            <i class="fa fa-envelope-open-text fa-3x golden"></i>
+          </button>
+
+        </div>
+      </div>
+        
+    </footer>
+    <hr>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
