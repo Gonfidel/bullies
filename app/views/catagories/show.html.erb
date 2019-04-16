@@ -32,27 +32,28 @@
 
     
 
-<div class="container">
+<div  style="text-align: center;">
+
+<%# ADD POST BUTTON IF SIGNED IN %>
   <% if admin_signed_in? %>
-    <div class="add">
-      <button style="width: 100%; height: 100%; background-color: transparent; border: none;">
-        <%= link_to "+", new_post_path, class: "center" %>
-      </button>
+    <div class="add" >
+      <%= link_to "+", new_post_path, class: "center" %>
     </div>
       <br>
   <% end %>
 
-
+<%# SHOW POSTS %>
   <% @catagory.posts.each do |post| %>
 
     <%= post.content%>
     <%= image_tag post.image, class: "thumbnail" %>
 
+<%# SHOW DELETE BUTTON IF SIGNED IN %>
     <% if admin_signed_in? %>
       <%= link_to '<i class="fa fa-trash"></i>'.html_safe, post, method: :delete %>      
     <% end %>
 
-      
+      <%# ADD HR IF NOT LAST POST %>
     <% if post != @catagory.posts.last %>  
       <hr>
     <% end %>
@@ -61,4 +62,23 @@
 </div>
 
 
+<br><hr>
 
+<footer>
+  <div class="container">
+    <div class="d-flex justify-content-around">
+
+      <button class="btn btn-default grow" onclick="window.open('https://www.facebook.com/badriderbullies','_blank');">
+        <i class="fab fa-facebook fa-3x golden"></i>
+      </button>
+
+      <button class="btn btn-default grow" onclick="window.open('https://www.instagram.com/bad_rider_bullies','_blank');">
+        <i class="fab fa-instagram fa-3x golden"></i>
+      </button>
+
+      <button class="btn btn-default grow">
+        <i class="fa fa-envelope-open-text fa-3x golden"></i>
+      </button>
+
+    </div>
+  </div>

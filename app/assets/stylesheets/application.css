@@ -28,7 +28,7 @@ footer{
 }
 
 #logo{
-  height: 10em;
+  height: 13em;
 }
 
 
@@ -121,12 +121,18 @@ li>a:hover{
 }
 
 .add{
-  width: 20em;
-  height: 6em;
+  width: 7em;
+  height: 3em;
   border: 2px dashed rgba(255,255,255,.5);
   background-color: transparent;
   color: rgba(255,255,255,.5);
   text-align: center;
+  margin: auto;
+
+}
+.add>button>a{
+  height: 100%;
+  width: 100%;
 }
 .thumbnail{
   width: 20em;
