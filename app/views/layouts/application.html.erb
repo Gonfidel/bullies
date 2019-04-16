@@ -15,49 +15,24 @@
   </head>
 
   <body>
+      <% if admin_signed_in? %>
+        <%= link_to 'Logout', destroy_admin_session_path, method: :delete, class: "m-auto text-lobster" %> 
+      <% end %>
 
-    <header>
-      <%= image_tag 'logo_background.jpg', id: 'logo' %>
-    </header>
-      
-    <hr>
 
-      <div class="navbar ">
-        <span><button class="btn text-lobster underline grow">HOME</button></span>
-        <span><button class="btn text-lobster underline grow">STUDS</button></span>
-        <span><button class="btn text-lobster underline grow">FEMALES</button></span>
-        <span><button class="btn text-lobster underline grow">PUPS</button></span>
-        <span><button class="btn text-lobster underline grow">CONTACT US</button></span>
-      </div>
-    <hr>
+
 
 
 
     <%= yield %>
 
 
-    <hr>
-    <footer>
-      <div class="container">
-        <div class="d-flex justify-content-around">
 
-          <button class="btn btn-default grow" onclick="window.open('https://www.facebook.com/badriderbullies','_blank');">
-            <i class="fab fa-facebook fa-3x golden"></i>
-          </button>
 
-          <button class="btn btn-default grow" onclick="window.open('https://www.instagram.com/bad_rider_bullies','_blank');">
-            <i class="fab fa-instagram fa-3x golden"></i>
-          </button>
 
-          <button class="btn btn-default grow">
-            <i class="fa fa-envelope-open-text fa-3x golden"></i>
-          </button>
 
-        </div>
-      </div>
-        
-    </footer>
-    <hr>
+
+
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

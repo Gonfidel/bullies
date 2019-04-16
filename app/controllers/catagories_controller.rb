@@ -2,7 +2,12 @@ class CatagoriesController < ApplicationController
   before_action :set_catagory, only: [:show, :edit, :update, :destroy]
 
   def home
-    
+    @catagories = Catagory.all
+
+  end
+
+  def contactus
+
   end
 
   # GET /catagories
@@ -15,6 +20,7 @@ class CatagoriesController < ApplicationController
   # GET /catagories/1.json
   def show
       @posts = Post.where("catagory = ?", @catagory.id)
+      @catagories = Catagory.all
   end
 
   # GET /catagories/new

@@ -1,11 +1,48 @@
 
+<div class="bg-black">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+
+    <%= image_tag 'logo_round.png', id: 'logo', class: "mx-3" %>
+    
 
 
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
 
-<div class="d-flex justify-content-around">
-  <img class="med-img" src="https://scontent-lax3-1.cdninstagram.com/vp/c8f27e9c85755ecce4a9904b8a818793/5D3C073F/t51.2885-15/sh0.08/e35/p640x640/53508390_304999083503706_1781212022336207654_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com" alt="" srcset="">
-  <img class="med-img" src="https://scontent-lax3-1.cdninstagram.com/vp/60fdb3ba3dfc0535c702751b25408d45/5D45E8EB/t51.2885-15/sh0.08/e35/s640x640/54231687_423174281777405_5913089997356598775_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com" alt="" srcset="">
+    <div class="collapse navbar-collapse" id="navbarsExample07">
+      <ul class="navbar-nav mr-auto ">
+        <li class="nav-item grow mr-3">
+          <%= link_to "HOME", :controller => :catagories, :action => :home, class: "text-lobster grow" %>
+        </li>
+        <% @catagories.each do |catagory| %>
+          <li class="nav-item grow mr-3">
+            <%= link_to catagory.name, catagory, class: "text-lobster grow" %>
+          </li>
+        <% end  %>
+        <li class="nav-item grow mr-3">
+          <%= link_to "CONTACT US", :controller => :catagories, :action => :contactus, class: "text-lobster grow" %>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
 </div>
+<hr>
+
+
+
+
+
+
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron p-0 ">
+    <%= image_tag 'mainpage-pit-wide.jpg', class: "img-fluid" %>
+
+  </div>
 
 
 
@@ -14,5 +51,29 @@
 
 
 
-</body>
-</html>
+</main>
+
+
+
+
+<hr>
+<footer>
+  <div class="container">
+    <div class="d-flex justify-content-around">
+
+      <button class="btn btn-default grow" onclick="window.open('https://www.facebook.com/badriderbullies','_blank');">
+        <i class="fab fa-facebook fa-3x golden"></i>
+      </button>
+
+      <button class="btn btn-default grow" onclick="window.open('https://www.instagram.com/bad_rider_bullies','_blank');">
+        <i class="fab fa-instagram fa-3x golden"></i>
+      </button>
+
+      <button class="btn btn-default grow">
+        <i class="fa fa-envelope-open-text fa-3x golden"></i>
+      </button>
+
+    </div>
+  </div>
+    
+</footer>
