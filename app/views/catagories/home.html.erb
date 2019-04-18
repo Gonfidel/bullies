@@ -10,7 +10,7 @@
 
   <%= link_to image_tag('BULLIES_LOGO.png',id: 'logo', class: "grow "), :controller => :catagories, :action => :home %>
 
-    <button class="navbar-toggler mt-auto ml-auto" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+    <button role="button" class="navbar-toggler mt-auto ml-auto" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
     </button>
     <div class="collapse navbar-collapse border-top mt-2" style="z-index: 1;" id="navbarsExample07">
@@ -112,15 +112,15 @@
   <div class="container">
     <div class="d-flex justify-content-around">
 
-      <button class="btn btn-default grow" onclick="window.open('https://www.facebook.com/badriderbullies','_blank');">
+      <button class="btn btn-default grow" role="button" onclick="window.open('https://www.facebook.com/badriderbullies','_blank');">
         <i class="fab fa-facebook fa-3x icon-button"></i>
       </button>
 
-      <button class="btn btn-default grow" onclick="window.open('https://www.instagram.com/bad_rider_bullies','_blank');">
+      <button class="btn btn-default grow" role="button" onclick="window.open('https://www.instagram.com/bad_rider_bullies','_blank');">
         <i class="fab fa-instagram fa-3x icon-button"></i>
       </button>
 
-      <button class="btn btn-default grow">
+      <button class="btn btn-default grow" role="button" onclick="window.open('mailto:trentheist@gmail.com','_blank');>
         <i class="fa fa-envelope-open-text fa-3x icon-button"></i>
       </button>
 
