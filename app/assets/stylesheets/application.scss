@@ -14,59 +14,120 @@
  *= require_self
  */
 
+ @import 'bootstrap';
+.navbar{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+
+
  body{
   margin: 0px;
-  background-color: black;
+  background-color: white;
   padding: 0px;
+  --primary-text: rgba(50,50,50,1);
+  --secondary-text: #202020;
+  // --secondary-text: #d39e0c;
+  --shadow-text: transparent;
+  // --shadow-text: #707070;
+  --label-size: 30px;
+
+}
+.bg-orange{
+  background-color: orange;
+}
+.bg-dlight{
+  background-color: rgb(207, 202, 202);
+}
+main{
+  background-color: white;
+  margin: 0px;
 }
 
 header{
+  background-color: rgba(243, 60, 60, 0.829);
   text-align: center;
+  padding: 5px;
+  margin: 0px;
+}
+header>span{
+  margin-right: 3em;
+  color: white;
+  font: 400 var(--label-size)/1.3 'Lobster Two', Helvetica, sans-serif;
 }
 footer{
   text-align: center;
+  background-color: white;
+}
+.view-image{
+  width: 40vw;
 }
 
 #logo{
   height: 13em;
 }
 
+#logout{
+  color: white;
+  font: 400 var(--label-size)/1.3 'Lobster Two', Helvetica, sans-serif;
+}
+#logout:hover{
+  background-color: transparent;
+}
 
 hr{
   background-color: rgba(255, 255, 255, 0.651);
+
+  height: 3px;
   width: 85%;
 }
 .navbar{
   width: 75%;
   margin:  0px auto 0px auto;
 }
+#contactus{
+  font: 400 var(--label-size)/1.3 'Lobster Two', Helvetica, sans-serif;
+  color: var(--secondary-text) !important;
+  text-shadow: 1px 1px 1px #707070 !important;
+}
+.contactus:hover{
+  text-decoration: none;
+  border-bottom: 1px var(--secondary-text) solid; /*#f8f8f8*/
+  background-color: transparent;
+  color: var(--secondary-text);
+  text-shadow: 1px 1px 1px var(--shadow-text);
+  font: 400 var(--label-size)/1.3 'Lobster Two', Helvetica, sans-serif;
+}
+
 
 .text-lobster{
-    font: 400 25px/1.3 'Lobster Two', Helvetica, sans-serif;
-    color: #d39e0c;
-    text-shadow: 1px 1px 0px #f8f8f8
+    font: 400 var(--label-size)/1.3 'Lobster Two', Helvetica, sans-serif;
+    color: var(--secondary-text) !important;
+    text-shadow: 1px 1px 1px var(--shadow-text) !important;
 }
 .text-lobster:hover{
   text-decoration: none;
-  border-bottom: 1px #d39e0c solid; /*#f8f8f8*/
-  color: #d39e0c;
-  text-shadow: 1px 1px 0px #f8f8f8;
-  font: 400 25px/1.3 'Lobster Two', Helvetica, sans-serif;
+  border-bottom: 1px var(--secondary-text) solid; /*#f8f8f8*/
+  background-color: transparent;
+  color: var(--secondary-text);
+  text-shadow: 1px 1px 1px var(--shadow-text);
+  font: 400 var(--label-size)/1.3 'Lobster Two', Helvetica, sans-serif;
 }
 
 .text-lobster-label{
-  font: 400 30px/1.3 'Lobster Two', Helvetica, sans-serif;
-  color: #d39e0c;
-  text-shadow: 1px 1px 0px #271111
+  font: 400 var(--label-size)/1.3 'Lobster Two', Helvetica, sans-serif;
+  color: var(--secondary-text);
+  text-shadow: 1px 1px 1px var(--shadow-text);
 }
 
 .btn:hover{
-  color: #d39e0c; /*#d39e0c*/
+  color: var(--secondary-text); /*#d39e0c*/
 
 }
 
 .underline:hover{
-  border-bottom: 1px #d39e0c solid; /*#f8f8f8*/
+  border-bottom: 1px var(--secondary-text) solid; /*#f8f8f8*/
 }
 
 .med-img{
@@ -74,70 +135,88 @@ hr{
 }
 
 .golden{
-  color: #d8ac33;
+  color: var(--secondary-text);
 }
 .golden-back{
-  background-color: #d8ac33;
+  background-color: var(--secondary-text);
 }
 .golden:hover{
-  color: #f5b732;
+  color: var(--secondary-text);
 }
 
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.01); }
 
-.bg-black{
-  background-color: black;
-}
 
 li{
-  color: #d39e0c;
+  color: var(--secondary-text);
 }
 
 li>a{
-  text-decoration: #d39e0c;
-  color: #d39e0c;
-  text-shadow: 1px 1px 0px #f8f8f8;
-  font: 400 25px/1.3 'Lobster Two', Helvetica, sans-serif;
+  text-decoration: var(--secondary-text);
+  color: var(--secondary-text);
+  text-shadow: 1px 1px 1px var(--shadow-text);
+  font: 400 var(--label-size)/1.3 'Lobster Two', Helvetica, sans-serif;
   text-transform: uppercase;
 }
 
 
 li>a:hover{
   text-decoration: none;
-  border-bottom: 1px #d39e0c solid; /*#f8f8f8*/
-  color: #d39e0c;
-  text-shadow: 1px 1px 0px #f8f8f8;
-  font: 400 25px/1.3 'Lobster Two', Helvetica, sans-serif;
-
+  border-bottom: 1px var(--secondary-text) solid; /*#f8f8f8*/
+  color: var(--secondary-text);
+  text-shadow: 1px 1px 1px var(--shadow-text);
+  font: 400 var(--label-size)/1.3 'Lobster Two', Helvetica, sans-serif;
 
 }
 
-
+.btn:hover{
+  color: white !important;
+}
 
 .circle{
   padding: 10px;
   border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  width: 150px;
+  height: 150px;
 }
 
 .add{
-  width: 7em;
-  height: 3em;
-  border: 2px dashed rgba(255,255,255,.5);
-  background-color: transparent;
-  color: rgba(255,255,255,.5);
-  text-align: center;
   margin: auto;
-
+  padding: 10px;
 }
-.add>button>a{
-  height: 100%;
-  width: 100%;
+.btn-add{
+  width: 10em;
+  height: 4em;
+  border: 2px dashed rgba(0, 0, 0, 0.329);
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 24px;
+  padding: 0px;
 }
 .thumbnail{
-  width: 20em;
+  width: 40em;
 }
 
+.text-lg{
+  font-size: 24px;
+}
+.large-text-box{
+  width: 100%;
+  height: 300px;
+}
+
+.icon-button{
+  color: gray;
+}
+.icon-button:hover{
+  background-color: transparent;
+  color: black;
+}
 
 
 

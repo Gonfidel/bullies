@@ -1,14 +1,97 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
 
-<p>
-  <strong>Catagory:</strong>
-  <%= @post.catagory %>
-</p>
+<%# HEADER %>     
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div class="bg-white border-bottom">
+
+
+
+<nav class="navbar navbar-inverse navbar-expand-lg navbar-light bg-white  ">
+
+  <%= link_to image_tag('BULLIES_LOGO.png',id: 'logo', class: "grow "), :controller => :catagories, :action => :home %>
+
+    <button class="navbar-toggler mt-auto ml-auto" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+    <div class="collapse navbar-collapse border-top mt-2" style="z-index: 1;" id="navbarsExample07">
+      <ul class="navbar-nav float-right" >
+
+          <% @catagories.each do |catagory| %>
+            <li class="nav-item grow ml-2 mr-5 text-right" >
+              <%= link_to catagory.name, catagory, class: "text-lobster" %>
+            </li>
+          <% end  %>
+          <li class="nav-item grow ml-2 mr-5 text-right">
+            <%= link_to "CONTACT US", :controller => :catagories, :action => :contactus%>
+          </li>
+        
+      </ul>
+    </div>
+</nav>
+
+</div>
+
+
+
+
+<%# MAIN %> 
+<main class="bg-light">
+  <div class="row pt-3 pl-5 pr-5 bg-light" style="max-width: 1600px;">
+    <div class="col-md-6">
+      <div class="row no-gutters rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative" style="max-width: 700px;">
+        <div class="col  d-flex flex-column position-static">
+          <%= image_tag @post.image, class: "card-img-top rounded shadow-sm" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 pt-4">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mt-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0"><%= @post.title  %></h3>
+          <%= @post.created_at.strftime("%B %d, %Y")  %>
+          <p class="mt-4 mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mt-4 shadow-sm h-md-250 position-relative mb-4">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-3">Contact us</h3>
+          <div class="mb-1">
+            <span><i class="fa fa-phone"></i></span>
+            <span>(385)722-7952</span>
+          </div>
+           <div>
+             <span><i class="fa fa-envelope"></i></span>
+             <span></span>
+           </div>
+          <p class="mt-4 mb-auto">Our availability is Monday through Friday, 8AM to 5PM. Responses may be delayed outside of normal business hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+
+
+<%# FOOTER %>     
+
+<footer class="border-top">
+<br>
+  <div class="container">
+    <div class="d-flex justify-content-around">
+
+      <button class="btn btn-default grow" onclick="window.open('https://www.facebook.com/badriderbullies','_blank');">
+        <i class="fab fa-facebook fa-3x icon-button"></i>
+      </button>
+
+      <button class="btn btn-default grow" onclick="window.open('https://www.instagram.com/bad_rider_bullies','_blank');">
+        <i class="fab fa-instagram fa-3x icon-button"></i>
+      </button>
+
+      <button class="btn btn-default grow">
+        <i class="fa fa-envelope-open-text fa-3x icon-button"></i>
+      </button>
+
+    </div>
+  </div>

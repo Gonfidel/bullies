@@ -1,83 +1,102 @@
-<p id="notice"><%= notice %></p>
 
 
-<div class="bg-black">
-<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+<%# HEADER %>     
 
-    <%= image_tag 'logo_round.png', id: 'logo', class: "mx-3" %>
-    
-    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+<div class="bg-white border-bottom">
+
+
+
+<nav class="navbar navbar-inverse navbar-expand-lg navbar-light bg-white  ">
+
+  <%= link_to image_tag('BULLIES_LOGO.png',id: 'logo', class: "grow "), :controller => :catagories, :action => :home %>
+
+    <button class="navbar-toggler mt-auto ml-auto" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
     </button>
+    <div class="collapse navbar-collapse border-top mt-2" style="z-index: 1;" id="navbarsExample07">
+      <ul class="navbar-nav float-right" >
 
-    <div class="collapse navbar-collapse" id="navbarsExample07">
-      <ul class="navbar-nav mr-auto ">
-        <li class="nav-item grow mr-3">
-          <%= link_to "HOME", :controller => :catagories, :action => :home, class: "text-lobster grow" %>
-        </li>
-        <% @catagories.each do |catagory| %>
-          <li class="nav-item grow mr-3">
-            <%= link_to catagory.name, catagory, class: "text-lobster grow" %>
+          <% @catagories.each do |catagory| %>
+            <li class="nav-item grow ml-2 mr-5 text-right" >
+              <%= link_to catagory.name, catagory, class: "text-lobster" %>
+            </li>
+          <% end  %>
+          <li class="nav-item grow ml-2 mr-5 text-right">
+            <%= link_to "CONTACT US", :controller => :catagories, :action => :contactus%>
           </li>
-        <% end  %>
-        <li class="nav-item grow mr-3">
-          <%= link_to "CONTACT US", :controller => :catagories, :action => :contactus, class: "text-lobster grow" %>
-        </li>
+        
       </ul>
     </div>
 </nav>
+
 </div>
-<hr>
 
 
-    
 
-<div  style="text-align: center;">
 
-<%# ADD POST BUTTON IF SIGNED IN %>
+
+<%# ------------MAIN---------------- %>     
+<main>
+  <div  style="text-align: center;">
+
+  <%# ADD POST BUTTON IF SIGNED IN %>
   <% if admin_signed_in? %>
     <div class="add" >
-      <%= link_to "+", new_post_path, class: "center" %>
+      <%= button_to "New Post", new_post_path, :method => :get, class: "btn-add" %>
     </div>
       <br>
   <% end %>
 
-<%# SHOW POSTS %>
-  <% @catagory.posts.each do |post| %>
+  <%# SHOW POSTS %>
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <% @catagory.posts.each do |post| %>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <%= image_tag post.image, class: "card-img-top" %>
+                <div class="card-body">
+                  <h2 class="card-title"><%= post.title %></h2>
+                  <p class="card-text"><%= post.content %></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <%= button_to "View", post, :controller => 'posts', :action => 'show', :method => :get, class: "btn btn-sm btn-outline-secondary mr-1" %>
+                      <% if admin_signed_in? %>
+                       <%= button_to "Edit", edit_post_path(post.id), :controller => 'posts', :action => 'edit', :method => :get, class: "btn btn-sm btn-outline-secondary" %>
+                      <% end %>
+                    </div>
+                      <% if admin_signed_in? %>
+                          <%= link_to "<i class='fa fa-trash'></i>".html_safe, post, method: :delete, data: {confirm: "Are you sure?"}, class: "icon-button text-lg"%>      
+                      <% end %>                  
+                    </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</main>
 
-    <%= post.content%>
-    <%= image_tag post.image, class: "thumbnail" %>
+<%# FOOTER %>     
 
-<%# SHOW DELETE BUTTON IF SIGNED IN %>
-    <% if admin_signed_in? %>
-      <%= link_to '<i class="fa fa-trash"></i>'.html_safe, post, method: :delete %>      
-    <% end %>
-
-      <%# ADD HR IF NOT LAST POST %>
-    <% if post != @catagory.posts.last %>  
-      <hr>
-    <% end %>
-
-  <% end %>
-</div>
-
-
-<br><hr>
-
-<footer>
+<footer class="border-top">
+<br>
   <div class="container">
     <div class="d-flex justify-content-around">
 
       <button class="btn btn-default grow" onclick="window.open('https://www.facebook.com/badriderbullies','_blank');">
-        <i class="fab fa-facebook fa-3x golden"></i>
+        <i class="fab fa-facebook fa-3x icon-button"></i>
       </button>
 
       <button class="btn btn-default grow" onclick="window.open('https://www.instagram.com/bad_rider_bullies','_blank');">
-        <i class="fab fa-instagram fa-3x golden"></i>
+        <i class="fab fa-instagram fa-3x icon-button"></i>
       </button>
 
       <button class="btn btn-default grow">
-        <i class="fa fa-envelope-open-text fa-3x golden"></i>
+        <i class="fa fa-envelope-open-text fa-3x icon-button"></i>
       </button>
 
     </div>

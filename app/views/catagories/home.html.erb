@@ -1,79 +1,128 @@
 
-<div class="bg-black">
-<nav class="navbar navbar-expand-lg navbar-dark bg-black">
 
-    <%= image_tag 'logo_round.png', id: 'logo', class: "mx-3" %>
-    
+<%# HEADER %>     
+
+<div class="bg-white border-bottom">
 
 
-    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+
+<nav class="navbar navbar-inverse navbar-expand-lg navbar-light bg-white  ">
+
+  <%= link_to image_tag('BULLIES_LOGO.png',id: 'logo', class: "grow "), :controller => :catagories, :action => :home %>
+
+    <button class="navbar-toggler mt-auto ml-auto" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
     </button>
+    <div class="collapse navbar-collapse border-top mt-2" style="z-index: 1;" id="navbarsExample07">
+      <ul class="navbar-nav float-right" >
 
-    <div class="collapse navbar-collapse" id="navbarsExample07">
-      <ul class="navbar-nav mr-auto ">
-        <li class="nav-item grow mr-3">
-          <%= link_to "HOME", :controller => :catagories, :action => :home, class: "text-lobster grow" %>
-        </li>
-        <% @catagories.each do |catagory| %>
-          <li class="nav-item grow mr-3">
-            <%= link_to catagory.name, catagory, class: "text-lobster grow" %>
+          <% @catagories.each do |catagory| %>
+            <li class="nav-item grow ml-1 mr-5 text-right" >
+              <%= link_to catagory.name, catagory, class: "text-lobster" %>
+            </li>
+          <% end  %>
+          <li class="nav-item grow ml-1 mr-5 text-right">
+            <%= link_to "CONTACT US", :controller => :catagories, :action => :contactus%>
           </li>
-        <% end  %>
-        <li class="nav-item grow mr-3">
-          <%= link_to "CONTACT US", :controller => :catagories, :action => :contactus, class: "text-lobster grow" %>
-        </li>
+        
       </ul>
     </div>
-
-  </nav>
+</nav>
 
 </div>
-<hr>
 
 
 
 
 
 
-<main role="main">
+
+<div class="bg-light p-0">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron p-0 ">
-    <%= image_tag 'mainpage-pit-wide.jpg', class: "img-fluid" %>
 
-  </div>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" >
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="5000">
+          <%= image_tag 'cropped-8.jpg', class: "d-block w-100" %>
+        </div>
+        <div class="carousel-item" data-interval="5000">
+          <%= image_tag 'cropped-5.jpg', class: "d-block w-100" %>
+        </div>
+        <div class="carousel-item" data-interval="5000">
+          <%= image_tag 'cropped-6.jpg', class: "d-block w-100" %>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
 
 
+<div class="container marketing mt-5 mb-0">
 
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4 text-center">
+        <div class="round border bg-dark circle m-auto">
+          <i class="fa fa-dna mt-5"></i>
+        </div>
+        <h2>Genetics</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestiae pariatur quibusdam voluptas aliquid eligendi ipsum nostrum voluptatibus.</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 text-center">
+        <div class="round border bg-orange circle m-auto">
+          <i class="fa fa-drumstick-bite mt-5"></i>
+        </div>
+        <h2>Nutrition</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex magnam quam vero harum, aspernatur nobis!</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 text-center">
+        <div class="round border bg-dark circle m-auto">
+          <i class="fa fa-dumbbell mt-5"></i>
+        </div>
+        <h2>Routine</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, facere? Deserunt maxime corrupti laboriosam praesentium?</p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
 
-
-
-
-
-</main>
-
-
-
-<br>
 <hr>
-<footer>
+
+
+<div class="mt-5 mb-5 container ">
+  <h2>About us</h2>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus possimus, nemo amet quae consectetur repudiandae corporis facilis dignissimos ad velit tenetur assumenda tempora suscipit neque culpa necessitatibus expedita autem doloremque? Sunt neque quasi porro unde consequatur cumque reiciendis quod possimus quam aspernatur numquam facilis, vitae non esse temporibus itaque! Quibusdam reiciendis ex fugiat. Repellendus nulla veritatis eveniet enim vitae repudiandae quia cum fuga totam veniam blanditiis, praesentium recusandae. Pariatur ea quibusdam minus soluta? Cupiditate totam repellendus aliquid quisquam, modi dolorum suscipit atque tempora nemo ducimus voluptatibus illum adipisci minima consequatur sapiente non neque id eum laudantium nam minus. Dolor aliquam vel sit, itaque, enim autem doloribus amet ex nemo officia, deserunt nesciunt quos! Eum ea cumque est quod eos voluptatum vero cum vel possimus expedita odio corrupti alias ab molestias, rem, illum quisquam eveniet beatae, quis fuga. Veritatis voluptas similique, quae corrupti saepe quis dicta repudiandae magnam est suscipit, fuga laborum atque asperiores eligendi officia nulla veniam totam nobis, perferendis maiores dolorum amet dignissimos. Cum, itaque fugiat quidem libero eveniet iusto illo odit enim magni mollitia cumque eos quos dolore suscipit iure expedita? Sunt iusto beatae eum mollitia deserunt at, laboriosam nesciunt id. Aut voluptatem quam, et, similique iste at numquam expedita delectus eligendi veniam culpa eaque mollitia laborum ipsam libero repellat sunt consequuntur deleniti. Culpa ullam vitae neque vel voluptatem dicta blanditiis officia! Ullam, vero iusto magni accusantium sequi molestias atque asperiores perferendis qui incidunt. Pariatur voluptate distinctio facilis, quod veniam rerum illo. Maiores, molestiae voluptatem. Officiis deleniti eveniet, esse est vel odio cupiditate illum.</p>
+</div>
+
+
+</div>
+
+
+
+
+<%# FOOTER %>     
+
+<footer class="border-top mt-2 mb-3">
+<br>
   <div class="container">
     <div class="d-flex justify-content-around">
 
       <button class="btn btn-default grow" onclick="window.open('https://www.facebook.com/badriderbullies','_blank');">
-        <i class="fab fa-facebook fa-3x golden"></i>
+        <i class="fab fa-facebook fa-3x icon-button"></i>
       </button>
 
       <button class="btn btn-default grow" onclick="window.open('https://www.instagram.com/bad_rider_bullies','_blank');">
-        <i class="fab fa-instagram fa-3x golden"></i>
+        <i class="fab fa-instagram fa-3x icon-button"></i>
       </button>
 
       <button class="btn btn-default grow">
-        <i class="fa fa-envelope-open-text fa-3x golden"></i>
+        <i class="fa fa-envelope-open-text fa-3x icon-button"></i>
       </button>
 
     </div>
   </div>
-    
-</footer>
