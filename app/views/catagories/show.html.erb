@@ -1,26 +1,35 @@
+
+
 <%# HEADER %>     
+
 <div class="bg-white border-bottom">
-  <nav class="navbar navbar-inverse navbar-expand-xl navbar-light bg-white  ">
-    <%= link_to image_tag('BULLIES_LOGO.png',id: 'logo', class: "grow "), :controller => :catagories, :action => :home %>
-      <button role="button" class="navbar-toggler mt-auto ml-auto" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon "></span>
-      </button>
-      <div class="collapse navbar-collapse border-top border-warning mt-2" style="z-index: 1;" id="navbarsExample07">
-        <ul class="navbar-nav float-right" >
-            <% @catagories.each do |catagory| %>
-              <li class="nav-item grow ml-1 mr-4 text-right" >
-                <%= link_to catagory.name, catagory, class: "text-lobster" %>
-              </li>
-            <% end  %>
-            <li class="nav-item grow ml-1 mr-4 text-right">
-              <%= link_to "CONTACT US", :controller => :catagories, :action => :contactus%>
-            </li>    
-        </ul>
-      </div>
-  </nav>
+
+
+
+<nav class="navbar navbar-inverse navbar-expand-lg navbar-light bg-white  ">
+
+  <%= link_to image_tag('BULLIES_LOGO.png',id: 'logo', class: "grow "), :controller => :catagories, :action => :home %>
+
+    <button role="button" class="navbar-toggler mt-auto ml-auto" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+    <div class="collapse navbar-collapse border-top border-warning mt-2" style="z-index: 1;" id="navbarsExample07">
+      <ul class="navbar-nav float-right" >
+
+          <% @catagories.each do |catagory| %>
+            <li class="nav-item grow ml-1 mr-5 text-right" >
+              <%= link_to catagory.name, catagory, class: "text-lobster" %>
+            </li>
+          <% end  %>
+          <li class="nav-item grow ml-1 mr-5 text-right">
+            <%= link_to "CONTACT US", :controller => :catagories, :action => :contactus%>
+          </li>
+        
+      </ul>
+    </div>
+</nav>
+
 </div>
-
-
 
 
 
@@ -43,7 +52,7 @@
         <div class="row">
           <% @catagory.posts.each do |post| %>
             <div class="col-md-4">
-              <div class="card mb-4 shadow-md " >
+              <div class="card mb-4 shadow-sm">
                 <%= image_tag post.image, class: "card-img-top " %>
                 <div class="card-body mb-4">
                   <h2 class="card-title"><%= post.title %></h2>
@@ -72,7 +81,7 @@
 
 
 <%# FOOTER %>     
-<footer class="border-top mb-3">
+<footer class="border-top  mb-3">
 <br>
   <div class="container">
     <div class="d-flex justify-content-around">
