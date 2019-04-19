@@ -56,7 +56,8 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to :controller => 'catagories', :action => 'home', notice: 'Post was successfully deleted.' }
+      # format.html { redirect_to :controller => 'catagories', :action => 'home', notice: 'Post was successfully deleted.' }
+      format.html {redirect_back(fallback_location: root_path)}
       format.json { head :no_content }
     end
   end
