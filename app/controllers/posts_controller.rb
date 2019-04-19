@@ -30,6 +30,8 @@ class PostsController < ApplicationController
       if @post.save
         format.html { redirect_to :controller => 'catagories', :action => 'home', notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
+        # format.html {redirect_back(fallback_location: root_path)}
+
       else
         format.html { render :new }
         format.json { render json: @post.errors, status: :unprocessable_entity }

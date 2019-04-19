@@ -21,13 +21,15 @@
   <body>
       <% if admin_signed_in? %>
         <header>
-          <span>Hello <%= current_admin.email %></span>
+          <span style="font-size: 17px;">Hello <%= current_admin.email %></span>
           <span>
             <%= link_to 'Logout', destroy_admin_session_path, method: :delete, id: "logout" %> 
           </span>
-
         </header>
       <% end %>
+
+
+
 
 
 
