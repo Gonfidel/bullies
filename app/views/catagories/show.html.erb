@@ -10,18 +10,18 @@
 
   <%= link_to image_tag('BULLIES_LOGO.png',id: 'logo', class: "grow "), :controller => :catagories, :action => :home %>
 
-    <button class="navbar-toggler mt-auto ml-auto" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+    <button role="button" class="navbar-toggler mt-auto ml-auto" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
     </button>
-    <div class="collapse navbar-collapse border-top mt-2" style="z-index: 1;" id="navbarsExample07">
+    <div class="collapse navbar-collapse border-top border-warning mt-2" style="z-index: 1;" id="navbarsExample07">
       <ul class="navbar-nav float-right" >
 
           <% @catagories.each do |catagory| %>
-            <li class="nav-item grow ml-2 mr-5 text-right" >
+            <li class="nav-item grow ml-1 mr-5 text-right" >
               <%= link_to catagory.name, catagory, class: "text-lobster" %>
             </li>
           <% end  %>
-          <li class="nav-item grow ml-2 mr-5 text-right">
+          <li class="nav-item grow ml-1 mr-5 text-right">
             <%= link_to "CONTACT US", :controller => :catagories, :action => :contactus%>
           </li>
         
@@ -30,7 +30,6 @@
 </nav>
 
 </div>
-
 
 
 
@@ -80,9 +79,9 @@
   </div>
 </main>
 
-<%# FOOTER %>     
 
-<footer class="border-top mt-2 mb-3">
+<%# FOOTER %>     
+<footer class="border-top  mb-3">
 <br>
   <div class="container">
     <div class="d-flex justify-content-around">
