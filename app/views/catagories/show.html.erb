@@ -53,9 +53,9 @@
         <div class="row">
           <% @catagory.posts.each do |post| %>
             <div class="col-md-4">
-              <div class="card mb-4 shadow-sm h-100">
-                <%= image_tag post.image, class: "card-img-top" %>
-                <div class="card-body mt-auto mb-auto">
+              <div class="card mb-4 shadow-sm">
+                <%= image_tag post.image, class: "card-img-top " %>
+                <div class="card-body mb-4">
                   <h2 class="card-title"><%= post.title %></h2>
                   <p class="card-text"><%= post.content %></p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -82,22 +82,22 @@
 
 <%# FOOTER %>     
 
-<footer class="border-top">
+<footer class="border-top mt-2 mb-3">
 <br>
   <div class="container">
     <div class="d-flex justify-content-around">
 
-      <button class="btn btn-default grow" onclick="window.open('https://www.facebook.com/badriderbullies','_blank');">
+      <button class="btn btn-default grow" role="button" onclick="window.open('https://www.facebook.com/badriderbullies','_blank');">
         <i class="fab fa-facebook fa-3x icon-button"></i>
       </button>
 
-      <button class="btn btn-default grow" onclick="window.open('https://www.instagram.com/bad_rider_bullies','_blank');">
+      <button class="btn btn-default grow" role="button" onclick="window.open('https://www.instagram.com/bad_rider_bullies','_blank');">
         <i class="fab fa-instagram fa-3x icon-button"></i>
       </button>
 
-      <button class="btn btn-default grow">
+      <a href="mailto:trentheist@gmail.com" role="button" class="btn btn-default grow">
         <i class="fa fa-envelope-open-text fa-3x icon-button"></i>
-      </button>
+      </a>
 
     </div>
   </div>
