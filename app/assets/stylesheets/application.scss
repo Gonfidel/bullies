@@ -21,7 +21,15 @@
 
 }
 
-
+div{
+  padding: 0px;
+}
+@media only screen and (max-width: 474px) {
+  .navbar-toggle-icon{
+    float: none;
+    text-align: center;
+  }
+}
 
 // .card-img-top{
 //   height: 15rem;
@@ -90,6 +98,12 @@
 .bg-dlight{
   background-color: rgb(207, 202, 202);
 }
+.bg-black{
+  background-color: black;
+}
+.bg-darker{
+  background-color: rgb(48, 47, 47);
+}
 main{
   background-color: white;
   margin: 0px;
@@ -116,6 +130,7 @@ footer{
 
 #logo{
   height: 13em;
+  margin-right:3rem;
 }
 
 #logout{
@@ -247,9 +262,7 @@ hr{
   color: orange;
 }
 
-.bg-black{
-  background-color: black;
-}
+
 
 
 /* Icon 1 */

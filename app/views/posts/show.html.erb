@@ -2,11 +2,11 @@
 
 <%# HEADER %>     
 
-<div class="bg-white border-bottom">
+<div class="bg-black border-bottom text-white">
 
 
 
-<nav class="navbar navbar-inverse navbar-expand-lg navbar-light bg-white  ">
+<nav class="navbar navbar-inverse navbar-expand-xl navbar-dark bg-transparent  ">
 
   <%= link_to image_tag('BULLIES_LOGO.png',id: 'logo', class: "grow "), :controller => :catagories, :action => :home %>
 
@@ -17,12 +17,12 @@
       <ul class="navbar-nav float-right" >
 
           <% @catagories.each do |catagory| %>
-            <li class="nav-item grow ml-1 mr-5 text-right" >
+            <li class="nav-item grow ml-1 mr-4 text-right" >
               <%= link_to catagory.name, catagory, class: "text-lobster" %>
             </li>
           <% end  %>
-          <li class="nav-item grow ml-1 mr-5 text-right">
-            <%= link_to "CONTACT US", :controller => :catagories, :action => :contactus%>
+          <li class="nav-item grow ml-1 mr-4 text-right">
+            <%= link_to "CONTACT US", {:controller => :catagories, :action => :contactus}, class: "text-lobster" %>
           </li>
         
       </ul>
@@ -30,7 +30,6 @@
 </nav>
 
 </div>
-
 
 
 <%# MAIN %> 
@@ -76,7 +75,7 @@
     
 
 <%# FOOTER %>     
-<footer class="border-top  mb-3">
+<footer class="border-top mb-3 bg-black">
 <br>
   <div class="container">
     <div class="d-flex justify-content-around">
