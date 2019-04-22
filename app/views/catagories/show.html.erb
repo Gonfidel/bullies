@@ -42,30 +42,39 @@
   <%# SHOW POSTS %>
     <div class="album py-5 bg-dark-secondary">
       <div class="container">
-        <div class="row">
-          <% @catagory.posts.each do |post| %>
-            <div class="col-md-4">
-              <div class="card mb-4 bg-dark-dark text-dark-theme">
-                <%= image_tag post.image, class: "card-img-top " %>
-                <div class="card-body mb-4">
-                  <h2 class="card-title"><%= post.title %></h2>
-                  <p class="card-text"><%= post.content %></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <%= button_to "View", post, :controller => 'posts', :action => 'show', :method => :get, class: "btn btn-sm btn-outline-secondary mr-1 hover-orange" %>
-                      <% if admin_signed_in? %>
-                       <%= button_to "Edit", edit_post_path(post.id), :controller => 'posts', :action => 'edit', :method => :get, class: "btn btn-sm btn-outline-secondary" %>
-                      <% end %>
-                    </div>
-                      <% if admin_signed_in? %>
-                          <%= link_to "<i class='fa fa-trash'></i>".html_safe, post, method: :delete, data: {confirm: "Are you sure?"}, class: "icon-button text-lg"%>      
-                      <% end %>                  
-                    </div>
+        <% if @catagory.posts.length > 0 %>
+          <div class="row">
+            <% @catagory.posts.each do |post| %>
+              <div class="col-md-4">
+                <div class="card mb-4 bg-dark-dark text-dark-theme">
+                  <%= image_tag post.image, class: "card-img-top " %>
+                  <div class="card-body mb-4">
+                    <h2 class="card-title"><%= post.title %></h2>
+                    <p class="card-text"><%= post.content %></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <%= button_to "View", post, :controller => 'posts', :action => 'show', :method => :get, class: "btn btn-sm btn-outline-secondary mr-1 hover-orange" %>
+                        <% if admin_signed_in? %>
+                        <%= button_to "Edit", edit_post_path(post.id), :controller => 'posts', :action => 'edit', :method => :get, class: "btn btn-sm btn-outline-secondary" %>
+                        <% end %>
+                      </div>
+                        <% if admin_signed_in? %>
+                            <%= link_to "<i class='fa fa-trash'></i>".html_safe, post, method: :delete, data: {confirm: "Are you sure?"}, class: "icon-button text-lg"%>      
+                        <% end %>                  
+                      </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          <% end %>
-        </div>
+            <% end %>
+          </div>
+        <% else %>
+          <div class="text-white">
+            <i class="fa fa-dog text-xl mb-5"></i>
+            <p >There are currently no doggos here..</p>
+          </div>
+          
+        <% end %>
+          
       </div>
     </div>
     
