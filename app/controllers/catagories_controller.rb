@@ -1,5 +1,6 @@
 class CatagoriesController < ApplicationController
   before_action :set_catagory, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :delete, :destroy]
 
   def home
     @catagories = Catagory.all

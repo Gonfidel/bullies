@@ -1,11 +1,5 @@
-
-
 <%# HEADER %>     
-
 <div class="bg-black border-bottom text-white">
-
-
-
 <nav class="navbar navbar-inverse navbar-expand-xl navbar-dark bg-transparent  ">
 
   <%= link_to image_tag('BULLIES_LOGO.png',id: 'logo', class: "grow "), :controller => :catagories, :action => :home %>
@@ -31,10 +25,9 @@
 
 </div>
 
-
 <%# MAIN %> 
-<main class="bg-light">
-  <div class="row pt-3 pl-5 pr-5 bg-light" style="max-width: 1600px;">
+<main class="bg-dark-secondary">
+  <div class="row pt-3 pl-5 pr-5 bg-transparent" style="max-width: 1600px;">
     <div class="col-md-6">
       <div class="row no-gutters rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative" style="max-width: 700px;">
         <div class="col  d-flex flex-column position-static">
@@ -43,14 +36,14 @@
       </div>
     </div>
     <div class="col-md-6 pt-4">
-      <div class="row no-gutters border rounded overflow-hidden flex-md-row mt-4 shadow-sm h-md-250 position-relative">
+      <div class="row no-gutters rounded overflow-hidden flex-md-row mt-4 shadow-sm h-md-250 position-relative bg-dark-dark text-dark-theme">
         <div class="col p-4 d-flex flex-column position-static">
           <h3 class="mb-0"><%= @post.title  %></h3>
           <%= @post.created_at.strftime("%B %d, %Y")  %>
           <p class="mt-4 mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
         </div>
       </div>
-      <div class="row no-gutters border rounded overflow-hidden flex-md-row mt-4 shadow-sm h-md-250 position-relative mb-4">
+      <div class="row no-gutters rounded overflow-hidden flex-md-row mt-4 shadow-sm h-md-250 position-relative mb-4 bg-dark-dark text-dark-theme">
         <div class="col p-4 d-flex flex-column position-static">
           <h3 class="mb-3">Contact us</h3>
           <div class="mb-1">
@@ -59,7 +52,7 @@
           </div>
            <div>
              <span><i class="fa fa-envelope"></i></span>
-             <span><a href="mailto:trentheist@gmail.com">trentheist@gmail.com</a></span>
+             <span><a href="mailto:trentheist@gmail.com" style="color: lightblue;">trentheist@gmail.com</a></span>
            </div>
           <p class="mt-4 mb-auto">Our availability is Monday through Friday, 8AM to 5PM. Responses may be delayed outside of normal business hours.</p>
         </div>

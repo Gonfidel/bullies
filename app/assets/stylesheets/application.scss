@@ -21,15 +21,7 @@
 
 }
 
-div{
-  padding: 0px;
-}
-@media only screen and (max-width: 474px) {
-  .navbar-toggle-icon{
-    float: none;
-    text-align: center;
-  }
-}
+
 
 // .card-img-top{
 //   height: 15rem;
@@ -37,7 +29,7 @@ div{
 // }
 
 .card{
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5);
   transition: 0.3s;
   border-radius: 5px;
 }
@@ -46,7 +38,7 @@ div{
   object-fit: cover;
 }
 .card:hover{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px 0 rgba(0,0,0,.5);
 }
 .image-fix{
   // object-fit: cover;
@@ -76,7 +68,7 @@ div{
  body{
   margin: 0px;
   padding: 0px;
-  background-color: white;
+  background-color: black;
   --primary-text: rgba(50,50,50,1);
   --secondary-text: #202020;
   // --secondary-text: #d39e0c;
@@ -101,8 +93,21 @@ div{
 .bg-black{
   background-color: black;
 }
-.bg-darker{
-  background-color: rgb(48, 47, 47);
+.bg-dark-light{
+  background-color: rgb(54,57,63);
+}
+.bg-dark-secondary{
+  background-color: rgb(47,49,54);
+}
+.bg-dark-dark{
+  background-color: rgb(32,34,37);
+}
+.text-dark-theme{
+  color: rgb(200,200,200);
+}
+.hover-orange{}
+.hover-orange:hover{
+  background-color: orange !important;
 }
 main{
   background-color: white;
