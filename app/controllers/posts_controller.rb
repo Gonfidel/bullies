@@ -30,7 +30,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to :controller => 'catagories', :action => 'home', notice: 'Post was successfully created.' }
+        format.html { redirect_to catagory_path(@post.catagory_id), notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to :controller => 'catagories', :action => 'home', notice: 'Post was successfully updated.' }
+        format.html { redirect_to catagory_path(@post.catagory_id), notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
