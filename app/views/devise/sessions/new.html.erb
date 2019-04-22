@@ -1,5 +1,7 @@
-<div class="m-auto pr-5 pl-5 pb-5 shadow-lg border" style="width: 420px; background-color: rgb(220,220,220); border-radius: 7px; position: relative; top: 10px; padding: 10px;">
-<%= image_tag 'BULLIES_LOGO.png', id: "logo", class: "mt-5 mb-5 ml-5" %>
+<body class="bg-dark-secondary">
+  
+<div class="container mx-auto mt-5 card bg-dark-dark text-dark-theme" style="width: 323px;">
+<%= image_tag 'BULLIES_LOGO.png', id: "logo", class: "mx-auto my-auto" %>
 <h1>Please sign in</h1>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -24,6 +26,7 @@
 <% end %>
 
 <%# render "devise/shared/links" %>
+</body>
 
 
 
