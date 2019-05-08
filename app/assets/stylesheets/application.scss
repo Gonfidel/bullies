@@ -23,6 +23,8 @@
 
 
 
+
+
 // .card-img-top{
 //   height: 15rem;
 //   object-fit: cover;
@@ -68,7 +70,8 @@
  body{
   margin: 0px;
   padding: 0px;
-  background-color: black;
+  background-color: rgba(23,23,23,1);
+  // background-color: black;
   --primary-text: rgba(50,50,50,1);
   --secondary-text: #202020;
   // --secondary-text: #d39e0c;
@@ -91,16 +94,16 @@
   background-color: rgb(207, 202, 202);
 }
 .bg-black{
-  background-color: black;
+  background-color: rgba(23,23,23,1);
 }
 .bg-dark-light{
   background-color: rgb(54,57,63);
 }
 .bg-dark-secondary{
-  background-color: rgb(47,49,54);
+  background-color: rgba(34, 34, 38,1);
 }
 .bg-dark-dark{
-  background-color: rgb(32,34,37);
+  background-color: rgb(36,34,37);
 }
 .text-dark-theme{
   color: rgb(200,200,200);
@@ -239,9 +242,9 @@ hr{
 .btn-add{
   width: 10em;
   height: 4em;
-  border: 2px dashed rgba(0, 0, 0, 0.329);
+  border: 2px dashed rgba(255, 255, 255, 0.788);
   background-color: transparent;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.808);
   text-align: center;
   font-size: 24px;
   padding: 0px;

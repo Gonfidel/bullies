@@ -4,10 +4,11 @@ class CatagoriesController < ApplicationController
 
   def home
     @catagories = Catagory.all
-
+    
   end
-
+  
   def contactus
+    @catagories = Catagory.all
 
   end
 
